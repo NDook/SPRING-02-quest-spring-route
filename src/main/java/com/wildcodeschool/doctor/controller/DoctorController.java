@@ -20,7 +20,7 @@ public class DoctorController {
         if(number >0 && number < 13 ){
             throw new ResponseStatusException(HttpStatus.SEE_OTHER, "it's ok Tom");
         }
-        if(number == 13) {
+        else if(number == 13) {
             return new Doctor(number, "Jodie Whittaker");
         }
         throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Impossible de récupérer l'incarnation " + number);
